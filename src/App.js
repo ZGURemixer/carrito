@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Producto from './Componentes/producto';
 import './App.css';
 import {Container} from 'reactstrap';
@@ -9,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
       {/* Plantilla para producto disponible en producto.js */}
-      <div> 
+      ? <>
         <Container>
           <Row>
               <Producto 
@@ -50,7 +49,7 @@ function App() {
               />
           </Row>
         </Container>
-      </div>
+      </>:''
   );
 }
 
