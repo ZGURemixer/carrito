@@ -1,5 +1,5 @@
 import React from 'react';
-import Fragment from 'react';
+import ReactDOM from 'react-dom';
 import Producto from './Componentes/producto';
 import './App.css';
 import {Container} from 'reactstrap';
