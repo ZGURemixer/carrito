@@ -1,11 +1,13 @@
 import React from 'react';
 import Producto from './Componentes/producto';
 import './App.css';
-import {Container, Row} from 'reactstrap';
+import {Container, Row, Component, Fragment} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
       {/* Plantilla para producto disponible en producto.js */}
+      <Fragment>
         <Container>
           <Row>
               <Producto 
@@ -46,6 +48,7 @@ function App() {
               />
           </Row>
         </Container>
+      </Fragment>
   );
 }
 
