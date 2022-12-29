@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'reactstrap';
+import {Modal, Button, Container} from 'reactstrap';
 
 class FichaProducto extends React.Component{
 
@@ -7,7 +7,9 @@ class FichaProducto extends React.Component{
 
     constructor(props){
         super();
-
+        this.state = {
+            modal:false
+        };
         this.toggle = this.toggle.bind(this);
 
     }
@@ -15,12 +17,23 @@ class FichaProducto extends React.Component{
     // Escribe las características del objeto en la consola.
 
     toggle(){
-        console.log(this.props);
+        this.setState(prevState => ({
+            modal: !prevState.modal
+        }));
+
     }
 
     render(){
         return(
-            <Button onClick={this.toggle}>Ver ficha</Button>
+            <Container>
+                {/* Caracerísticas del botón que realiza la acción */}
+                <Button onClick={this.toggle}>Ver ficha</Button>
+
+                {/* Acciones de dicho botón */}
+                <Modal isOpen={this.state.modal}>
+                    React en JovenesProgramadores
+                </Modal>
+            </Container>
         );
     }
 }

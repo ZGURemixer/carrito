@@ -1,5 +1,6 @@
 import React from 'react';
-import {Button, CardText, CardSubtitle, CardTitle, CardBody, CardImg, Col, Card} from 'reactstrap';
+// import {Button, CardText, CardSubtitle, CardTitle, CardBody, CardImg, Col, Card} from 'reactstrap';
+import {CardText, CardSubtitle, CardTitle, CardBody, CardImg, Col, Card} from 'reactstrap';
 import './producto.css';
 import FichaProducto from './FichaProducto';
 
