@@ -4,6 +4,7 @@ import './App.css';
 import {Container} from 'reactstrap';
 import {Row} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navegacion from './Componentes/Navegacion.js';
 
 class App extends React.Component {
   render(){
@@ -11,6 +12,7 @@ class App extends React.Component {
         {/* Plantilla para producto disponible en producto.js */}
             ? <>
               <Container>
+                <Navegacion titulo="Mi primer sitio de compras en React"/>
                 <Row>
                     <Producto 
                       titulo='Doom Eternal PS4' 

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Modal, Button, Container} from 'reactstrap';
+import {CardImg, Modal, ModalHeader, ModalBody, Button, Container, ModalFooter} from 'reactstrap';
+import './FichaProducto.css';
 
 class FichaProducto extends React.Component{
 
@@ -11,10 +12,8 @@ class FichaProducto extends React.Component{
             modal:false
         };
         this.toggle = this.toggle.bind(this);
-
+        console.log(props.props);
     }
-
-    // Escribe las características del objeto en la consola.
 
     toggle(){
         this.setState(prevState => ({
@@ -31,7 +30,21 @@ class FichaProducto extends React.Component{
 
                 {/* Acciones de dicho botón */}
                 <Modal isOpen={this.state.modal}>
-                    React en JovenesProgramadores
+                    <ModalHeader>
+                        {this.props.props.titulo}
+                    </ModalHeader>
+
+                    <ModalBody>
+                        <CardImg src={this.props.props.imagen}/>
+                        <p> El detalle del producto seleccionado es el siguiente: </p>
+                        {this.props.props.descripcion}
+                        <p>Este producto tiene un valor de $<b>{this.props.props.precio}</b>.</p>
+                    </ModalBody>
+                        
+                    <ModalFooter className="modalFooter">
+                        <Button color="primary" onClick={this.toggle}>Agregar al carrito</Button>
+                        <Button color="secondary" onClick={this.toggle}>Atrás</Button>
+                    </ModalFooter>
                 </Modal>
             </Container>
         );
