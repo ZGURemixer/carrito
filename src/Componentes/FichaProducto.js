@@ -1,7 +1,8 @@
 import React from 'react';
 import {CardImg, Modal, ModalHeader, ModalBody, Button, Container, ModalFooter} from 'reactstrap';
 import './FichaProducto.css';
-import {listaCarrito} from '../listaCarrito.json';
+import listaCarrito from '../listaCarrito.json';
+var CartList = listaCarrito.listaCarrito
 
 class FichaProducto extends React.Component{
 
@@ -24,7 +25,7 @@ class FichaProducto extends React.Component{
     }
     
     agregarCarrito(){
-        listaCarrito.push({
+        CartList.push({
             "titulo": this.props.props.titulo,
             "precio": this.props.props.precio
         });

@@ -1,13 +1,14 @@
 import React from 'react';
 import {Badge, Button, PopoverBody, PopoverHeader, Popover, Table} from 'reactstrap';
-import {listaCarrito} from '../listaCarrito.json';
+import listaCarrito from '../listaCarrito.json';
+var CartList = listaCarrito.listaCarrito
 
 class Carro extends React.Component{
     constructor(){
         super();
         this.state={
             popoverOpen:false,
-            listaCarrito
+            CartList
         };
 
         this.toggle=this.toggle.bind(this);
@@ -20,13 +21,13 @@ class Carro extends React.Component{
     }
     
     render(){
-        const arregloCarrito = this.state.listaCarrito.map(
-            (listaCarrito, i) => {
+        const arregloCarrito = this.state.CartList.map(
+            (CartList, i) => {
                 return (
                     <tr>
                         <td>{(i += 1 )}</td>
-                        <td>{listaCarrito.titulo}</td>
-                        <td>{listaCarrito.precio}</td>
+                        <td>{CartList.titulo}</td>
+                        <td>{CartList.precio}</td>
                     </tr>
                 )
             }
