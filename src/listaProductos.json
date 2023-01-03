@@ -1,10 +1,10 @@
 {
     "listaProductos":[
         {
-                      "titulo":"Doom Eternal PS4", 
-                      "imagen":"https://www.weplay.cl/pub/media/catalog/product/cache/d406ac87fd7d160c9527a5559b847e93/p/s/ps4_doom-eternal.jpg", 
-                      "descripcion":"Los ejércitos del infierno han invadido la Tierra. Ponte en la piel del Slayer en una épica campaña para un jugador y cruza dimensiones para detener la destrucción definitiva de la humanidad.", 
-                      "precio":"6666",
+                      "titulo":"Gigabyte GeForce RTX 3080 Ti", 
+                      "imagen":"https://media.solotodo.com/media/products/1452599_picture_1630907080.jpg", 
+                      "descripcion":"Las tarjetas gráficas GeForce RTX™ 3080 Ti y RTX 3080 ofrecen el alto rendimiento que buscan los gamers. Basado en Ampere, la segunda generación de la arquitectura RTX de NVIDIA, cuentan con Núcleos RT mejorados y Núcleos Tensor, nuevos multiprocesadores de transmisión y memorias GDDR6X súper rápidas, para una experiencia de juego simplemente increíble.", 
+                      "precio":"1149900",
                       "stock": "20"
                     },
                     {
@@ -36,17 +36,17 @@
                       "stock": "800"
                     },
                     {
-                      "titulo":"Big Chungus PS4",
-                      "imagen":"https://static.wikia.nocookie.net/big-chungus/images/7/7a/AB851D95-0AA6-496D-83FC-6616222C8F01.jpeg",
-                      "descripcion":"El videojuego más del mundo",
-                      "precio":"999999999",
-                      "stock": "2"
+                      "titulo":"Framework Laptop",
+                      "imagen":"https://static.frame.work/aqqzr02l9hrlc1hgbnjxkqx7m1ik",
+                      "descripcion":"Una notebook delgada, liviana y de alto rendimiento con procesador Intel® Core™ de 12.ª generación y Windows 11, disponible en tres configuraciones prediseñadas. Fácil de actualizar, personalizar y reparar si alguna vez lo necesita.",
+                      "precio":"890128",
+                      "stock": "50"
                     },
                     {
-                      "titulo":"EA Sports: FIFA Fighter XBOX",
-                      "imagen":"https://cdn.ebaumsworld.com/mediaFiles/picture/2187356/82212548.jpg",
-                      "descripcion": "Pelea a muerte con tus jugadores del fútbol favoritos",
-                      "precio":"7263",
+                      "titulo":"OUYA",
+                      "imagen":"https://i.pcmag.com/imagery/reviews/01e520npoBRbVdCksN0urXn-1..v1569482649.jpg",
+                      "descripcion": "Una videoconsola​ de código abierto que funciona con el sistema operativo Android,​ pensado tanto para juegos de teléfonos móviles/tabletas y juegos de la propia consola.",
+                      "precio":"84006",
                       "stock": "40"
                     }
         

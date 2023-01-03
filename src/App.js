@@ -42,7 +42,7 @@ class App extends React.Component {
         {/*  */}
             ? <>
               <Container>
-                <Navegacion titulo="Mi primer sitio de compras en React"/>
+                <Navegacion titulo="La tienda de Roger"/>
                 <Row>
                     
                     {/* Muestra los productos. Plantilla para producto disponible en producto.js */}

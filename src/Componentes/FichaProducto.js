@@ -85,7 +85,7 @@ class FichaProducto extends React.Component{
                         <CardImg src={this.props.props.imagen}/>
                         <p> El detalle del producto seleccionado es el siguiente: </p>
                         {this.props.props.descripcion}
-                        <p>Este producto tiene un valor de $<b>{this.props.props.precio}</b>.</p>
+                        <p>Este producto tiene un valor de <b>{this.props.props.precio}</b> CLP.</p>
                         <p>{AvailabilityText}<b>{StockFinal}</b> unidades de este producto disponibles.</p>
                     </ModalBody>
                         

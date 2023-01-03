@@ -12,8 +12,8 @@ class Navegacion extends React.Component {
                         <Carro/>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://www.youtube.com/@zguremixer5293">
-                            YouTube
+                        <NavLink href="https://github.com/ZGURemixer/carrito">
+                            GitHub
                         </NavLink>
                     </NavItem>
                 </Nav>
