@@ -3,6 +3,7 @@ import {Badge, Button, PopoverBody, PopoverHeader, Popover, Table} from 'reactst
 import listaCarrito from '../listaCarrito.json';
 var CartList = listaCarrito.listaCarrito
 
+
 class Carro extends React.Component{
     constructor(){
         super();
@@ -32,6 +33,12 @@ class Carro extends React.Component{
                 )
             }
         )
+        
+        // Suma de números
+        let cartListPrecio = CartList.reduce((acc, item) => acc + parseInt(item.precio), 0);
+        // console.log(cartListPrecio);
+
+
         return(
             <div>
                 <Button id="Popover1" color="info">
@@ -52,6 +59,13 @@ class Carro extends React.Component{
                             <tbody>
                                 {arregloCarrito}
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total:</th>
+                                    <th></th>
+                                    <th>{cartListPrecio} CLP</th>
+                                </tr>
+                            </tfoot>
                         </Table>
                     </PopoverBody>
                 </Popover>

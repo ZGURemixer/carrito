@@ -35,6 +35,41 @@ class FichaProducto extends React.Component{
     }
 
     render(){
+        // Esta variable se preocupa del texto
+        var AvailabilityText = "Hay ";
+
+        // Esta variable se preocupa del botón 
+        var ButtonOfDoom = <Button color="primary" onClick={this.agregarCarrito}>Agregar al carrito</Button>;
+
+        // Esta variable nos devuelve el título actualmente seleccionado.
+        var TituloElementoSeleccionado = this.props.props.titulo;
+
+        // Esta variable nos devuelve el stock inicial actualmente seleccionado.
+        var StockInicialElementoSeleccionado = this.props.props.stock;
+
+        // Esta variable se inicia en 0 para evitar problemas. Va aumentando a medida que se agreguen objetos al carrito.
+        var StockCompradoPorElUsuario = 0;
+
+        // Aquí se detecta si la lista del carrito NO es igual a cero.
+        if (CartList.length !== 0) {
+
+            // Esta constante genera un Array con todas las unidades de cierto producto que hayamos puesto en nuestro carrito.
+            const objetosObtenidos = CartList.filter(product => product.titulo.includes(TituloElementoSeleccionado));
+            StockCompradoPorElUsuario = objetosObtenidos.length;
+        }
+
+        // Se verifica si la resta es mayor a cero.
+        if ([StockInicialElementoSeleccionado - StockCompradoPorElUsuario] > 0) {
+            
+            var StockFinal = StockInicialElementoSeleccionado - StockCompradoPorElUsuario;
+
+        } else {
+
+            AvailabilityText = "No hay ";
+            ButtonOfDoom = "";
+        }
+
+
         return(
             <Container>
                 {/* Caracerísticas del botón que realiza la acción */}
@@ -51,11 +86,11 @@ class FichaProducto extends React.Component{
                         <p> El detalle del producto seleccionado es el siguiente: </p>
                         {this.props.props.descripcion}
                         <p>Este producto tiene un valor de $<b>{this.props.props.precio}</b>.</p>
-                        <p>Hay <b>{this.props.props.stock}</b> unidades de este producto disponibles.</p>
+                        <p>{AvailabilityText}<b>{StockFinal}</b> unidades de este producto disponibles.</p>
                     </ModalBody>
                         
                     <ModalFooter className="modalFooter">
-                        <Button color="primary" onClick={this.agregarCarrito}>Agregar al carrito</Button>
+                        {ButtonOfDoom}
                         <Button color="secondary" onClick={this.toggle}>Atrás</Button>
                     </ModalFooter>
                 </Modal>
